@@ -57,7 +57,7 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, ],
+        'DIRS': [TEMPLATE_DIR,'Workspace/tango_with_django_project/templates' ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -94,6 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': { 'min_length': 6, },
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -102,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 PASSWORD_HASHERS = (
    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
@@ -127,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [STATIC_DIR, ]
+STATICFILES_DIRS = [STATIC_DIR,  'Workspace/tango_with_django_project/static']
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 LOGIN_URL = '/rango/login/'
