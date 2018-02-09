@@ -1,20 +1,21 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-<html>
-  <head>
-      <title>About</title>
-  </head>
-  <body>
-  	<div>
-  		This tutorial has been put together by HYUNJUN KIM <br />
+{% block title_block %}
+             about
+{% endblock %}
 
-  	</div>
 
-  	<div>
-        <a href ="/rango/">Index</a><br/>
-  		<img src="{{ MEDIA_URL}}cat.jpg" alt="Picture of Cat" />
-      
-  	</div>
-  </body>
-</html>
+
+{% block body_block %}
+         
+          <h1>About Rango.... </h1>
+          <div>
+               This tutorial has been put together by HYUNJUN KIM <br />
+          </div>
+          <div>
+                
+                <img   src="{{ MEDIA_URL }}cat.jpg" />
+          </div>
+{% endblock %}
+          
